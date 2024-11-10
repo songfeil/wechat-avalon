@@ -69,5 +69,5 @@ def get_count():
 @app.route("/api/message", methods=['POST'])
 def process_wechat_message():
     params = request.get_json()
-    print(params)
+    app.logger.info(params)
     return make_succ_empty_response()
