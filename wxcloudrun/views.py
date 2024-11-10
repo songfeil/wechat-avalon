@@ -77,5 +77,5 @@ def process_wechat_message():
         'MsgType': 'text',
         'Content': '哔吥哔吥我是机器人！'
     })
+    app.logger.info(data)
     return Response(data, mimetype='application/json')
-    return make_succ_empty_response()
