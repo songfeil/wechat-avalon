@@ -79,6 +79,6 @@ def process_wechat_message():
         'CreateTime': params['CreateTime'],
         'MsgType': 'text',
         'Content': '哔吥哔吥我是机器人！'
-    })
+    }, ensure_ascii=False)
     app.logger.info(data)
     return Response(data, mimetype='application/json')
