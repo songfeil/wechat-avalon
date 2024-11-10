@@ -70,4 +70,12 @@ def get_count():
 def process_wechat_message():
     params = request.get_json()
     app.logger.info(params)
+    data = json.dumps({
+        'ToUserName': params['FromUserName'], 
+        'FromUserName': params['ToUserName'],
+        'CreateTime': params['CreateTime'],
+        'MsgType': 'text',
+        'Content': '哔吥哔吥我是机器人！'
+    })
+    return Response(data, mimetype='application/json')
     return make_succ_empty_response()
