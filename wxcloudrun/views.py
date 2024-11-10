@@ -70,3 +70,4 @@ def get_count():
 def process_wechat_message():
     params = request.get_json()
     print(params)
+    return make_succ_empty_response()
